@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>label converter|superlabel</title>
+    <link rel="stylesheet" href="./static/css/labelconverter.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-12 page_title">label converter</div>
+    </div>
+    <div class="row">
+        <div style="height: 150px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="col-xs-offset-7">
+                <div class="upload">
+                    <input id="file_image" type="file"/>
+                    <div id="btn_image" class="upload_figure nonselect"></div>
+                    <div id="uiname" class="fname_view">images.zip</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-offset-3">   
+                <div class="command_panel">
+                    <select id="select_mode">
+                        <option value="pascalvoc_yolo">PascalVOC -> YOLO</option>
+                    </select>     
+                    <div id="btn_upload" class="btn_upload">Upload</div>
+                    <div id="btn_download" class="btn_download">Download</div>
+                    <div id="loader_form"><div id="div_loader" class="loader"></div></div>
+                    <div id="notification" class="notification"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-offset-0">
+                <div class="upload">
+                    <input id="file_label" type="file"/>
+                    <div id="btn_label" class="upload_figure nonselect"></div>
+                    <div id="ulname" class="fname_view">labels.zip</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        
+    </div>
+    <script>
+        document.getElementById('file_image').onchange = function () {
+          $('#uiname').text(this.files.item(0).name);
+        };
+        document.getElementById('file_label').onchange = function () {
+          $('#ulname').text(this.files.item(0).name);
+        };
+        $('#btn_image').click(function(){
+            $('#notification').text("");
+            $('#file_image').trigger('click');
+        })
+        $('#btn_label').click(function(){
+            $('#notification').text("");
+            $('#file_label').trigger('click');
+        })
+        $('#btn_upload').click(function(){
+            upload();
+            //setTimeout(upload(), 0);
+        })
+        function upload(){
+            $('#loader_form').show();
+            var form_data = new FormData();
+            var f = document.getElementById("select_mode");
+            var mode = f.options[f.selectedIndex].value;
+            form_data.append('file_image', $('#file_image')[0].files[0]);
+            form_data.append('file_label', $('#file_label')[0].files[0]);
+            form_data.append('data', JSON.stringify({'mode': mode}));
+            $.ajax({
+                url: 'convert_label',
+                type: 'post',
+                data: form_data,
+                async: true,
+                cache: false,
+                contentType: false,
+                enctype: 'multipart/form-data',
+                processData: false,
+                success: function(response){
+                    console.log(response)
+                    $('#loader_form').hide();
+                    if (response['code'] == '1000'){
+                        $('#notification').text("Ready for download");
+                        //window.location.href = "convert_label?fname="+response['data']['fname'];
+                        $("#btn_download").click(function(){
+                            window.location.href = "convert_label?fname="+response['data']['fname'];
+                        });
+                        $('#btn_upload').hide();
+                        $('#btn_download').show();
+                    }else{
+                        $('#notification').text("Processing failed");
+                    }
+                }
+            }).done(function() {
+                
+            }).fail(function() {
+                $('#notification').text("Failed");
+            });
+        }
+    </script>
+</body>
+</html>

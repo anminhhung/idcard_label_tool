@@ -1,0 +1,12 @@
+2020-11-02 11:35:32.285 WARNING _internal - _log:  * Debugger is active!
+2020-11-02 11:35:32.291 INFO _internal - _log:  * Debugger PIN: 224-421-396
+2020-11-02 11:35:34.891 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:34] "[37mGET /home?mode=index&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 11:35:34.917 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:34] "[37mGET /static/css/home.css HTTP/1.1[0m" 200 -
+2020-11-02 11:35:34.918 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:34] "[37mGET /static/js/home.js HTTP/1.1[0m" 200 -
+2020-11-02 11:35:35.143 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-11-02 11:35:42.640 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:42] "[37mGET /get_img_name?mode=index&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 11:35:42.650 ERROR app - get: 'label'
+2020-11-02 11:35:42.651 ERROR app - get: None
+2020-11-02 11:35:42.651 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:42] "[37mGET /get_label?fname=demo.png HTTP/1.1[0m" 200 -
+2020-11-02 11:35:42.691 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 11:35:42] "[37mGET /get_ori_img?filename=demo.png HTTP/1.1[0m" 200 -
+2020-11-02 11:39:00.514 INFO _internal - _log:  * Detected change in '/Users/HungAn/Desktop/demo/app.py', reloading

@@ -1,0 +1,13 @@
+2020-11-02 13:33:06.270 WARNING _internal - _log:  * Debugger is active!
+2020-11-02 13:33:06.279 INFO _internal - _log:  * Debugger PIN: 224-421-396
+2020-11-02 13:33:13.237 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:13] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-02 13:33:15.678 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:15] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 13:33:15.687 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:15] "[37mGET /get_label?fname=000001.jpg HTTP/1.1[0m" 200 -
+2020-11-02 13:33:15.719 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:15] "[37mGET /get_ori_img?filename=000001.jpg HTTP/1.1[0m" 200 -
+2020-11-02 13:33:17.291 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:17] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 13:33:17.298 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:17] "[37mGET /get_label?fname=000002.jpg HTTP/1.1[0m" 200 -
+2020-11-02 13:33:17.311 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:17] "[37mGET /get_ori_img?filename=000002.jpg HTTP/1.1[0m" 200 -
+2020-11-02 13:33:19.215 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:19] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 13:33:19.236 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:19] "[37mGET /get_label?fname=demo.png HTTP/1.1[0m" 200 -
+2020-11-02 13:33:19.293 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 13:33:19] "[37mGET /get_ori_img?filename=demo.png HTTP/1.1[0m" 200 -
+2020-11-02 13:40:39.197 INFO _internal - _log:  * Detected change in '/Users/HungAn/Desktop/demo/app.py', reloading

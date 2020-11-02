@@ -1,0 +1,17 @@
+2020-11-02 10:32:10.869 WARNING _internal - _log:  * Debugger is active!
+2020-11-02 10:32:10.880 INFO _internal - _log:  * Debugger PIN: 224-421-396
+2020-11-02 10:32:23.439 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:23] "[37mGET /home?mode=index&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 10:32:23.475 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:23] "[37mGET /static/css/home.css HTTP/1.1[0m" 200 -
+2020-11-02 10:32:23.482 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:23] "[37mGET /static/js/home.js HTTP/1.1[0m" 200 -
+2020-11-02 10:32:23.584 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-11-02 10:32:24.910 ERROR app - get: list index out of range
+2020-11-02 10:32:24.911 ERROR app - get: None
+2020-11-02 10:32:24.911 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:24] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 10:32:28.905 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:28] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 10:32:28.966 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:28] "[37mGET /get_ori_img?filename=demo.png HTTP/1.1[0m" 200 -
+2020-11-02 10:32:33.047 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:33] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 10:32:33.067 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:33] "[37mGET /get_ori_img?filename=000001.jpg HTTP/1.1[0m" 200 -
+2020-11-02 10:32:34.542 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:34] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 10:32:34.577 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:34] "[37mGET /get_ori_img?filename=demo.png HTTP/1.1[0m" 200 -
+2020-11-02 10:32:35.193 INFO _internal - _log: 127.0.0.1 - - [02/Nov/2020 10:32:35] "[37mGET /get_img_name?mode=random&index=0 HTTP/1.1[0m" 200 -
+2020-11-02 10:33:19.876 INFO _internal - _log:  * Detected change in '/Users/HungAn/Desktop/demo/app.py', reloading

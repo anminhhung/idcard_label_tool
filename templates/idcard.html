@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/idcard.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="title">Superlabel</div>
+
+    <center>
+        <form id="upload-file" method="post">
+            <label for="mode">Choose a mode:</label>
+            <select id="mode" name="mode">
+                <option value="random">Random</option>
+                <option value="index">Index</option>
+            </select>
+            <br>
+            Number of image: <input type="text" id="number_id" name="number" placeholder="number of image">    
+            <br>
+            <button id="btn-loadfile" type="button" class="btn-loadfile">Load_file</button>
+        </form>
+    </center>
+
+    <p id="noti" style="text-align: center;"></p>
+
+    <div class="content_div">
+        <canvas id="preview_img" class="canvas_preview_img"></canvas> 
+        <form id="idcard_info" style="display:none;">
+            <label>IDnum: </label>
+            <input type="text" id="idnum" name="idnum" placeholder="idcard...."> <br>
+            <label>Name: </label>
+            <input type="text" id="idname" name="idname" placeholder="name......"> <br>
+            <label>Dob: </label>
+            <input type="text" id="iddob" name="iddob" placeholder="date...."> <br>
+            <label>Home: </label>
+            <input type="text" id="idhome" name="idhome" placeholder="home...."> <br>
+            <label>Address: </label>
+            <input type="text" id="idaddress" name="idaddress" placeholder="address...."> <br>
+
+            <center>
+                <button id="btn-SubmitLabel" type="button" class="btn-SubmitLabel">Submit</button>
+            </center>
+        </form>
+    </div>
+
+    <button id="btn-Previous" type="button" class="btn-Previous" style="float:left">Previous</button>
+    <button id="btn-Next" type="button" class="btn-Next" style="float:right">Next</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="static/js/idcard.js"></script>
+</body>
+
+</html>

@@ -81,11 +81,12 @@ function drawImageOCR(src, fname, index) {
     };
     imageObj.src = src;
 
-    document.getElementById("noti").innerHTML ="Index is: " + index + ", img_name: " + fname;
+    document.getElementById("noti_index").innerHTML ="Index: " + index;
+    document.getElementById("noti_number").innerHTML = "Image name: " + fname;
     document.getElementById('idcard_info').style.display = "block";
 }
 
-$('#btn-SubmitLabel').click(function () {
+$('#btn-Save').click(function () {
     console.log("fname in Submitlabel: " + fname)
     var idnum = document.getElementById('idnum').value;
     var idname = document.getElementById('idname').value;

@@ -91,6 +91,7 @@ function sendResult(){
         alert('Fail!');
     });
 }
+
 $(document).ready(function() {
     $("#input_label").on('keyup', function (e) {
         if (e.keyCode === 13) {

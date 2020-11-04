@@ -107,7 +107,7 @@ $('#btn-Save').click(function () {
             console.log(response);
         }
     }).done(function() {
-        alert("successful!")
+        document.getElementById("noti_save").innerHTML = "Successful!";
     }).fail(function() {
         alert('Fail!');
     });
@@ -119,13 +119,85 @@ $('#btn-Next').click(function () {
     index = parseInt(index) + 1
 
     getImgFileName('index', String(index));
+    document.getElementById("noti_save").innerHTML = "Not Save!";
 }
 )
 
 $('#btn-Previous').click(function () {
     var index = document.getElementById("number_id").value;
-    index = parseInt(index) - 1
+
+    index = parseInt(index)
+    if (index > 0) {
+        index = index - 1;
+    }
 
     getImgFileName('index', String(index));
+    document.getElementById("noti_save").innerHTML = "Not Save!";
 }
 )
+
+function save_info_idcard(){
+    var idnum = document.getElementById('idnum').value;
+    var idname = document.getElementById('idname').value;
+    var iddob = document.getElementById('iddob').value;
+    var idhome = document.getElementById('idhome').value;
+    var idaddress = document.getElementById('idaddress').value;
+
+    $.ajax({
+        url: '/send_result',
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',  
+        data: JSON.stringify({"version": "1.0", "fname": fname, 'idnum': idnum, 'idname': idname, 'iddob': iddob, 'idhome': idhome, 'idaddress': idaddress}),
+        success: function (response) {
+            if (response['code'] == 1001) {
+                alert("[Lỗi] Không nhận được phản hồi từ server, vui lòng kiểm tra lại!");
+            }
+            console.log(response);
+        }
+    }).done(function() {
+        document.getElementById("noti_save").innerHTML = "Successful!";
+    }).fail(function() {
+        alert('Fail!');
+    });
+}
+
+function view_previous_image(){
+    var index = document.getElementById("number_id").value;
+
+    index = parseInt(index)
+    if (index > 0) {
+        index = index - 1;
+    }
+
+    getImgFileName('index', String(index));
+    document.getElementById("noti_save").innerHTML = "Not Save!";
+}
+
+function view_next_image(){
+    var index = document.getElementById("number_id").value;
+
+    index = parseInt(index) + 1
+
+    getImgFileName('index', String(index));
+    document.getElementById("noti_save").innerHTML = "Not Save!";
+
+    if (index == -1){
+        document.getElementById("noti_save").innerHTML = "Label done!";
+    }
+}
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    switch (evt.keyCode) {
+        case 13:
+            save_info_idcard();
+            break;
+        case 37:
+            view_previous_image();
+            break;
+        case 39:
+            view_next_image();
+            break;
+    }
+};

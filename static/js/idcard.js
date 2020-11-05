@@ -187,6 +187,16 @@ function view_next_image(){
     }
 }
 
+function focus_field_down(){
+    var index_text = $("input[type='text']").index(this);
+    $("input[type='text']").eq(index_text + 1).focus();
+}
+
+function focus_field_top(){
+    var index_text = $("input[type='text']").index(this);
+    $("input[type='text']").eq(index_text + -1).focus();
+}
+
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     switch (evt.keyCode) {

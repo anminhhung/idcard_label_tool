@@ -25,10 +25,16 @@
     column-gap: 20px;
 }
 
-.item-mode,
+.item-mode {
+    color: black;
+    background-color: #3794e0;
+    padding: 0px 70px;
+}
+
 .item-imnum {
     color: black;
     background-color: #3794e0;
+    padding: 0px 40px;
 }
 
 .item-mode {

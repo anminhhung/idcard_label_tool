@@ -120,7 +120,15 @@ $('#btn-Save').click(function () {
 
 $('#btn-Next').click(function () {
     var index = document.getElementById("number_id").value;
-    index = parseInt(index) + 1
+
+    index = parseInt(index) ;
+
+    if (index <  total_of_images-1){
+        index += 1;
+    }
+    else{
+        index = 0;
+    }
 
     getImgFileName('index', String(index));
     document.getElementById("noti_save").innerHTML = "Not Save!";

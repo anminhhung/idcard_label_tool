@@ -1,3 +1,5 @@
+var total_of_images = 0
+
 $('#btn-loadfile').click(function () {
         var mode = document.getElementById("mode").value;
         var index = document.getElementById("number_id").value;
@@ -23,6 +25,8 @@ function getImgFileName(mode, index){
             console.log(response);
             fname = response['data']['fname'];
             index = response['data']['index'];
+            total = response['data']['total'];
+            total_of_images = total;
             document.getElementById('number_id').value = index;
             var return_index = String(response['data']['index']);
             if (return_index.localeCompare('-1')==0){
@@ -107,7 +111,7 @@ $('#btn-Save').click(function () {
             console.log(response);
         }
     }).done(function() {
-        document.getElementById("noti_save").innerHTML = "Successful!";
+        document.getElementById("noti_save").innerHTML = "Done!";
     }).fail(function() {
         alert('Fail!');
     });
@@ -156,7 +160,7 @@ function save_info_idcard(){
             console.log(response);
         }
     }).done(function() {
-        document.getElementById("noti_save").innerHTML = "Successful!";
+        document.getElementById("noti_save").innerHTML = "Done!";
     }).fail(function() {
         alert('Fail!');
     });
@@ -177,14 +181,17 @@ function view_previous_image(){
 function view_next_image(){
     var index = document.getElementById("number_id").value;
 
-    index = parseInt(index) + 1
+    index = parseInt(index) ;
+
+    if (index <  total_of_images-1){
+        index += 1;
+    }
+    else{
+        index = 0;
+    }
 
     getImgFileName('index', String(index));
     document.getElementById("noti_save").innerHTML = "Not Save!";
-
-    if (index == -1){
-        document.getElementById("noti_save").innerHTML = "Label done!";
-    }
 }
 
 function focus_field_down(){

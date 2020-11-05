@@ -27,8 +27,8 @@
 
 .item-mode,
 .item-imnum {
-    color: white;
-    background-color: rgb(145, 200, 236);
+    color: black;
+    background-color: #3794e0;
 }
 
 .item-mode {
@@ -48,7 +48,7 @@
 
 .item-mode-select select {
     width: 100%;
-    background-color: lightblue;
+    background-color: #afd5f0;
     padding-top: 6px;
 }
 
@@ -60,7 +60,7 @@
 
 .item-imnum-input input {
     width: 100%;
-    background-color: lightblue;
+    background-color: #afd5f0;
     border-style: solid;
     border-width: 1px;
 }

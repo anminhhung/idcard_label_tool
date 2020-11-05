@@ -123,7 +123,7 @@ class getImgName(Resource):
 
                 print("fname with mode = fname: ", fname)
             
-            return_result = {'code': '1000', 'status': rcode.code_1000, 'data':{'fname': fname, 'index': index}}
+            return_result = {'code': '1000', 'status': rcode.code_1000, 'data':{'fname': fname, 'index': index, 'total': len_file_list}}
         except Exception as e:
             logger.error(str(e))
             logger.error(str(traceback.print_exc()))

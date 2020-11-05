@@ -26,7 +26,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-light" style="background-color: #878a8a; padding: 4px 16px">
             <div class="col-xs-2"> 
                 <img src="static/figure/logo.png" alt="Logo AI" width="40" height="40">
                 <h2 class="navbar-brand">IDCARD ANNOTATOR</h2>
@@ -36,11 +36,11 @@
     <div class="container" style="margin-top:20px">
         <div class="row">
             <div class="col">
-                <br><br><br><br><br><br>
+                <br><br><br><br>
                 <div>
                     <canvas id="preview_img" class="canvas_preview_img"></canvas> 
                 </div>
-                <h1 id="noti_save" style="text-align: center;"></h1>
+                <h2 id="noti_save" style="text-align: center;"></h2>
             </div>
             
             <div class="col">
@@ -50,8 +50,8 @@
                     </div>
                     <div class="item-mode-select">
                         <select id="mode" name="mode">
-                            <option value="random">Random</option>
                             <option value="index">Index</option>
+                            <option value="random">Random</option>
                         </select>
                     </div>
                     <div class="item-imnum">
@@ -66,6 +66,7 @@
                 </div>
                 
                 <div>
+                    <p id="noti_total"></p>
                     <p id="noti_index"></p>
                     <p id="noti_number"></p>
                 </div>
@@ -73,35 +74,35 @@
                 <form id="idcard_info" style="display:none;" class="idcard_info">
                     <div class="form-group row">
                         <label style="background-color: #3794e0;" class="col-sm-2 col-form-label">idNum: </label>
-                        <div class="col-sm-10">
-                          <input type="text" style="background-color: #afd5f0;" class="form-control" id="idnum" name="idnum" placeholder="Enter idNum....">
+                        <div class="col-sm-10" style="margin: 0px; padding: 0px 0px;">
+                            <input type="text" style="background-color: #afd5f0;" class="form-control" id="idnum" name="idnum" placeholder="Enter idNum....">
                         </div>
                     </div>
 
                     <div class="form-group row">
                       <label style="background-color: #3794e0;" class="col-sm-2 col-form-label">Name: </label>
-                      <div class="col-sm-10">
+                      <div class="col-sm-10" style="margin: 0px; padding: 0px 0px;">
                         <input type="text" style="background-color: #afd5f0;" class="form-control" id="idname" name="idname" placeholder="Enter Name....">
                       </div>
                     </div>
 
                     <div class="form-group row">
                         <label style="background-color: #3794e0;" class="col-sm-2 col-form-label">DoB: </label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-10" style="margin: 0px; padding: 0px 0px;">
                           <input type="text" style="background-color: #afd5f0;" class="form-control" id="iddob" name="iddob" placeholder="Enter Date....">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label style="background-color: #3794e0;" class="col-sm-2 col-form-label">Home: </label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-10" style="margin: 0px; padding: 0px 0px;">
                           <input type="text" style="background-color: #afd5f0;" class="form-control" id="idhome" name="idhome" placeholder="Enter Home....">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label style="background-color: #3794e0;" class="col-sm-2 col-form-label">Address: </label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-10" style="margin: 0px; padding: 0px 0px;">
                           <input type="text" style="background-color: #afd5f0;" class="form-control" id="idaddress" name="idaddress" placeholder="Enter Address....">
                         </div>
                     </div>
